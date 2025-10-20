@@ -21,11 +21,10 @@ jobs:
     - name: 2. Configurar Node.js
       uses: actions/setup-node@v4
       with:
-          cache: 'npm'
+          node-version: ${{ matrix.node-version }}
   
     - run: npm install --legacy-peer-deps
     - run: npm run lint
     - run: npm test
     - run: npm run build
-    
     
