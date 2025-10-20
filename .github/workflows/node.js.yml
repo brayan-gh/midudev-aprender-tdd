@@ -14,11 +14,10 @@ jobs:
 
 
     steps:
+    - uses: actions/checkout@v4
     - name: 1. Traer mi código
-        uses: actions/checkout@v4 # Esta es la acción que clona tu repositorio
-
-      # --- ESTE PASO LO MODIFICAMOS PARA PROBAR ---
-      - name: 2. Mostrar Hola y ver archivos
-        run: |
-          echo "Hello World"
-          ls -la # Este comando sirve para listar los archivos en la máquina
+      run: echo "Hello World"
+    - name: 1. Traer mi código
+      run: date
+    - name: Muestra el directorio
+      run: ls -la
